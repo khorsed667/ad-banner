@@ -4,9 +4,17 @@ import Link from 'next/link';
 import { FaEdit } from 'react-icons/fa';
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import { Banner } from '@/types/index';
 
 const EditBannerTemplateBs = dynamic(() => import('./EditBannerTemplateBs'), { ssr: false });
+
+interface Banner {
+  name: string;
+  details: string;
+  cta: string;
+  img: string;
+  background: string;
+  src: string;
+}
 
 const BannerImageComp = () => {
   const [isEditOpen, setIsEditOpen] = useState(false);
@@ -16,7 +24,7 @@ const BannerImageComp = () => {
       name: "iPhone 15",
       details: "The latest iPhone 15 with A16 Bionic chip, 6.1-inch display, and improved camera system.",
       cta: "Learn More",
-      img: "/iphone_15.png",
+      img: "/images/iphone_15.png",
       background: "/product_bg.jpg",
       src: "https://www.apple.com/iphone-15/"
     },
@@ -24,7 +32,7 @@ const BannerImageComp = () => {
       name: "iPhone 15 Pro",
       details: "Experience the iPhone 15 Pro with advanced ProMotion display, A16 Bionic chip, and triple-camera system.",
       cta: "Learn More",
-      img: "/iPhone-15-Plus.png",
+      img: "/images/iPhone-15-Plus.png",
       background: "/product_bg.jpg",
       src: "https://www.apple.com/iphone-15-pro/"
     },
@@ -32,7 +40,7 @@ const BannerImageComp = () => {
       name: "iPhone 15 Pro Max",
       details: "The ultimate iPhone 15 Pro Max with a 6.7-inch display, ProMotion, and the best camera system.",
       cta: "Learn More",
-      img: "/iPhone-15-Pro-Max.png",
+      img: "/images/iPhone-15-Pro-Max.png",
       background: "/product_bg.jpg",
       src: "https://www.apple.com/iphone-15-pro/"
     },
@@ -40,7 +48,7 @@ const BannerImageComp = () => {
       name: "Samsung Galaxy S24",
       details: "Discover the new Samsung Galaxy S24 with a 6.1-inch display, Snapdragon 898, and improved camera.",
       cta: "Learn More",
-      img: "/Galaxy-S24.png",
+      img: "/images/Galaxy-S24.png",
       background: "/product_bg.jpg",
       src: "https://www.samsung.com/us/smartphones/galaxy-s24/"
     },
@@ -48,7 +56,7 @@ const BannerImageComp = () => {
       name: "Samsung Galaxy S24+",
       details: "Upgrade to the Samsung Galaxy S24+ with a larger display, advanced camera features, and Snapdragon 898.",
       cta: "Learn More",
-      img: "/Galaxy-S24.png",
+      img: "/images/Galaxy-S24.png",
       background: "/product_bg.jpg",
       src: "https://www.samsung.com/us/smartphones/galaxy-s24/"
     },
@@ -56,7 +64,7 @@ const BannerImageComp = () => {
       name: "Samsung Galaxy S24 Ultra",
       details: "The most powerful Samsung Galaxy S24 Ultra with a 6.8-inch display, advanced S Pen features, and best-in-class camera.",
       cta: "Learn More",
-      img: "/samsung-s24-ultra.png",
+      img: "/images/samsung-s24-ultra.png",
       background: "/product_bg.jpg",
       src: "https://www.samsung.com/bd/smartphones/galaxy-s24-ultra/"
     },

@@ -1,12 +1,20 @@
 "use client";
 import Image from 'next/image';
 import { useState } from 'react';
-import { Banner } from '@/types/index';
 
 interface EditBannerTemplateBsProps {
   banner: Banner;
   onClose: () => void;
   onUpdateBanner: (banner: Banner) => void;
+}
+
+interface Banner {
+  name: string;
+  details: string;
+  cta: string;
+  img: string;
+  background: string;
+  src: string;
 }
 
 const EditBannerTemplateBs = ({ banner, onClose, onUpdateBanner }: EditBannerTemplateBsProps) => {

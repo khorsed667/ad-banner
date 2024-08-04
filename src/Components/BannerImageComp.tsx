@@ -56,7 +56,7 @@ const BannerImageComp = () => {
       name: "Samsung Galaxy S24 Ultra",
       details: "The most powerful Samsung Galaxy S24 Ultra with a 6.8-inch display, advanced S Pen features, and best-in-class camera.",
       cta: "Learn More",
-      img: "/samsung-galaxy-s24-ultra.png",
+      img: "/samsung-s24-ultra.png",
       background: "/product_bg.jpg",
       src: "https://www.samsung.com/bd/smartphones/galaxy-s24-ultra/"
     },
